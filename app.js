@@ -43,7 +43,7 @@ var webSocketServer = new WebSocket.Server({verifyClient: (info, done) => {
 //global.arrayNotizie;
 //global.indice;
 
-// Apertura webserver socket
+// Accettazione connessione al server websocket
 webSocketServer.on('connection', function connection(socket, req){
 	socket.on('close', function(error){
 		console.log("Socket chiuso: ");
@@ -54,9 +54,63 @@ webSocketServer.on('connection', function connection(socket, req){
 	socket.on('message', function(messaggio){
 		console.log("Ricevuto messaggio è quello con l'accesstoken:");
 		console.log(req.session.accessTokenFb);
+		if ( req.session.accessTokenFb )
+		{
+			// Ottengo i 5 giochi che piacciono all'utente connesso
+			var richiestaPagineGiochi = https.get("https://graph.facebook.com/me/?fields=games.limit(5)&access_token="+req.session.accessTokenFb);
+			var datiPagine = "";
+			richiestaPagineGiochi.on("response", function(response){
+				// Un chunk (pezzo) di dati è stato ricevuto
+				response.on('data', (chunk) => {
+					datiPagine = datiPagine + chunk;
+				});
+				// Tutta la risposta è stata ricevuta
+				response.on('end', () => {
+					var indice = 0;
+					console.log(datiPagine);
+					var oggetto = JSON.parse(datiPagine);
+					if ( !(oggetto.error) )
+					{
+						while ( indice < oggetto.games.data.length )
+						{
+							// Ottengo le notizie e le invio al browser relative al gioco
+							console.log(sostituisciSpazi(oggetto.games.data[indice].name));
+							var urlRichiestaNotizia = "https://newsapi.org/v2/everything?q="+sostituisciSpazi(oggetto.games.data[indice].name)+"&sortBy=publishedAt&sources=ign&language=en&pageSize=5&apiKey="+apikeyNotizie;
+							var richiestaNotizia = https.get(urlRichiestaNotizia);
+							richiestaNotizia.on("response", function(response){
+								var datiNotizia = "";
+								// Un chunk (pezzo) di dati è stato ricevuto
+								response.on('data', (chunk) => {
+									datiNotizia = datiNotizia + chunk;
+								});
+								// Tutta la risposta è stata ricevuta
+								response.on('end', () => {
+									console.log(datiNotizia);
+									socket.send(datiNotizia);
+								});
+							});
+							indice = indice + 1;
+						}
+					}
+					else
+					{
+						// Errore durante l'ottenimento delle pagine che piacciono all'utente
+					}
+				});
+			});
+			// Successivamente ricerco per ogni gioco 5 articoli relativi ad essi
+			// e li restituisco tramite websocket al browser per renderizzarli
+			
+			var indice = 0;
+			
+		}
+		else
+		{
+			// Nessun token, non dovrei entrare qui teoricamente
+		}
 	});
 	
-	
+
 	//console.log(req);
 	//console.log(req.rawHeaders);
 	/*console.log(req.headers.cookie);
@@ -139,7 +193,7 @@ app.get("/login", function(req, res){
 	}
 });
 
-global.incremento = 0;
+//global.incremento = 0;
 
 // Restituisce la pagina di notizie che andrà a leggere
 // dal websocket le notizie ricevute dall'api rest newsapi.org
@@ -148,7 +202,7 @@ app.get("/notizie", function(req, res){
 	{
 		res.sendFile('notizie.html', {"root": __dirname });
 		console.log("mando pagina");
-		https.get("https://graph.facebook.com/me/?fields=games.limit(5)&access_token="+req.session.accessTokenFb);
+		
 	}
 	else
 	{
