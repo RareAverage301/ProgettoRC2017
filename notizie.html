@@ -3,17 +3,39 @@
 	<head>
 		<!--<script src="websocket.js"></script>-->
 		<script>
-			var socket = new WebSocket("ws://localhost:4000");
-
+			var indirizzoServer = "192.168.1.219";
+			var socket = new WebSocket("ws://"+indirizzoServer+":4000");
+			var indice = 0;
+			var numeroGiochi;
+			var numeroMessaggioRicevuto = 0;
 			// Funzione chiamata quando si connette al websocket server
 			socket.onopen = function(event){
 				console.log("Connesso al server");
+				socket.send("Ciaone");
 			};
 
 			// Funzione chiamata quando ricevo un messaggio nella websocket
 			socket.onmessage = function(event){
+				if ( numeroMessaggioRicevuto == 0 )
+				{
+					numeroGiochi = event.data;
+					console.log("Settato il numero di giochi");
+				}
+				console.log("Ricevuto il messaggio numero: "+ numeroMessaggioRicevuto);
+				numeroMessaggioRicevuto = numeroMessaggioRicevuto + 1;
 				console.log(event.data);
+				if ( numeroMessaggioRicevuto > numeroGiochi )
+				{
+					// Chiudo la socket
+					socket.close();
+				}
+				socket.onclose = function(event){
+					console.log("chiusura socket");
+				};
 			};
+			window.onbeforeunload = function () {
+				socket.close();
+			}
 		</script>
 	</head>
 	<body>

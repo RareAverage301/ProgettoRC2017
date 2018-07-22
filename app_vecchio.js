@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var url = require('url');
+
 
 // Moduli per effettuare la richiesta GET ai webserver
 var https = require('https');
@@ -8,14 +8,11 @@ var https = require('https');
 // Websocket per comunicare con il browser(client)
 // Apertura del socket porta 4000
 var WebSocket = require('ws');
-
+var webSocketServer = new WebSocket.Server({port: 4000});
 
 // Moduli per la gestione della sessione
 var session = require('express-session');
-var cookie = require('cookie');
 var cookieParser = require('cookie-parser');
-var memoryStore = require('memorystore')(session);
-var sessionStore = new memoryStore();
 
 // Link per oauth fb
 var indirizzoServer = "192.168.1.219";
@@ -25,60 +22,11 @@ var loginLink = "https://www.facebook.com/v3.0/dialog/oauth?client_id="+appIdFb+
 var accessTokenFb;
 var apikeyNotizie = "2eab465040024561869ebc1d37a9d829";
 app.use(cookieParser());
-var sessionParser = session({store: sessionStore, secret: "Provachiavesegreta123"});
-app.use(sessionParser);
-
-var webSocketServer = new WebSocket.Server({verifyClient: (info, done) => {
-	// Funzione che mi permette di accedere alle variabili di sessione
-	// mentre comunico tramite websocket
-	console.log("Parsing session from request..");
-	sessionParser(info.req, {}, () => {
-		console.log("Session parsed!");
-		console.log(info.req.session);
-		done(info.req.session.accessTokenFb);
-	});
-}, port: 4000});
+app.use(session({secret: "Provachiavesegreta123"}));
 
 // Globale
 //global.arrayNotizie;
 //global.indice;
-
-// Apertura webserver socket
-webSocketServer.on('connection', function connection(socket, req){
-	socket.on('close', function(error){
-		console.log("Socket chiuso: ");
-	});
-	socket.on('disconnect', function(error){
-		console.log("Socket disconnesso: ");
-	});
-	socket.on('message', function(messaggio){
-		console.log("Ricevuto messaggio è quello con l'accesstoken:");
-		console.log(req.session.accessTokenFb);
-	});
-	
-	
-	//console.log(req);
-	//console.log(req.rawHeaders);
-	/*console.log(req.headers.cookie);
-	// Session id cifrato è in rawHeaders: Cookie : -as.dsada
-	var sidCifrato = ottieniSid(req.headers.cookie);
-	console.log(sidCifrato);
-	
-	var sid = cookieParser.signedCookie(sidCifrato, "Provachiavesegreta123");
-	console.log(sid);
-	sessionStore.get(sid, function(error, session){
-		console.log(session);
-	});
-	// Ho il sid, vado a leggere dal 
-	//console.log("Access token fb richiedendo /notizie: "+ req.session.accessTokenFb);*/
-	
-});
-
-function ottieniSid(cookie)
-{
-	var posizione = cookie.indexOf('=');
-	return decodeURI(cookie.substr(posizione+1+4));
-}
 
 // Funzione per ottenere la root del server
 app.get("/", function(req, res){
@@ -148,7 +96,77 @@ app.get("/notizie", function(req, res){
 	{
 		res.sendFile('notizie.html', {"root": __dirname });
 		console.log("mando pagina");
-		https.get("https://graph.facebook.com/me/?fields=games.limit(5)&access_token="+req.session.accessTokenFb);
+		// Apertura webserver socket
+		webSocketServer.on('connection', function connection(socket){
+			socket.on('close', function(error){
+				console.log("Socket chiuso: ");
+			});
+			socket.on('disconnect', function(error){
+				console.log("Socket disconnesso: ");
+			});
+			socket.on('message', function(messaggio){
+				//console.log(socket);
+				if ( socket.readyState == 1 )
+				{
+					//console.log("Client connesso al WebSocket: " + messaggio);
+					// Ottengo le pagine relative ai giochi che piacciono all'utente
+					socket.richiestaPagineGiochi = https.get("https://graph.facebook.com/me/?fields=games.limit(5)&access_token="+req.session.accessTokenFb);
+					socket.risultatoNotizie = res;
+					socket.richiestaNotizie = req;
+					//socket.richiestaPagineGiochi.socketWeb = socket;
+					socket.data = '';
+					socket.richiestaPagineGiochi.on("response", function(response){
+						// Un chunk (pezzo) di dati è stato ricevuto
+						response.on('data', (chunk) => {
+							socket.data = socket.data + chunk;
+						});
+						// Tutta la risposta è stata ricevuta
+						response.on('end', () => {
+							var oggetto = JSON.parse(socket.data);
+							console.log("Esplodo?");
+							//console.log("Oggetto ottenuto api facebook");
+							//console.log(oggetto);
+							if ( !(oggetto.error) )
+							{
+								//res.sendFile('notizie.html', {"root": __dirname });
+								//console.log("Richiedo notizie");
+								// L'oggetto non contiene errori quindi avrò le mie informazioni
+								//var indice = 0;
+								arrayNotizie = [];
+								//global.indice = 0;
+								// Invio il numero di pagine che ho
+								console.log("Stato socket: " + socket.readyState);
+								socket.send(oggetto.games.data.length);
+								// Se il numero di pagine è maggiore di 0, ricerco gli articoli dei giochi 
+								if ( oggetto.games.data.length > 0 )
+								{					
+									console.log("riceviNotizie");
+									// Funzione per scrivere nell'array le notizie
+									riceviNotizie(arrayNotizie, oggetto.games.data, socket);
+									//console.log("Finite chiamate per ricevere le notizie");
+									//console.log(arrayNotizie);
+								}
+								else
+								{
+									// Non ci sono giochi
+									console.log("Non ci sono giochi");
+								}
+							}
+							else
+							{
+								console.log("Errore oggetto api facebook");
+								richiestaPagineGiochi.risultatoNotizie.redirect("/");
+							}
+						});
+					});
+				}
+				else
+				{
+					console.log("Socket non aperto");
+				}
+			});
+			//console.log("Access token fb richiedendo /notizie: "+ req.session.accessTokenFb);
+		});
 	}
 	else
 	{
@@ -176,7 +194,7 @@ function sostituisciSpazi(stringa)
 	return nuovaStringa;
 }
 
-function riceviNotizie(pagine, socket)
+function riceviNotizie(notizie, pagine, socket)
 {
 	console.log("Socket in riceviNotizie: "+socket.readyState);
 	if ( pagine.length > 0 && socket.readyState == 1 )
