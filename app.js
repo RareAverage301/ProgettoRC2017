@@ -8,7 +8,7 @@ var https = require('https');
 // Websocket per comunicare con il browser(client)
 // Apertura del socket porta 4000
 var WebSocket = require('ws');
-var socket = new WebSocket.Server({port: 4000});
+var webSocketServer = new WebSocket.Server({port: 4000});
 
 // Moduli per la gestione della sessione
 var session = require('express-session');
@@ -93,52 +93,63 @@ app.get("/login", function(req, res){
 app.get("/notizie", function(req, res){
 	if ( req.session.accessTokenFb )
 	{
-		//res.sendFile('notizie.html', {"root": __dirname });
-		// Ottengo le pagine relative ai giochi che piacciono all'utente
-		richiestaPagineGiochi = https.get("https://graph.facebook.com/me/?fields=games.limit(5)&access_token="+req.session.accessTokenFb);
-		richiestaPagineGiochi.risultatoNotizie = res;
-		richiestaPagineGiochi.richiestaNotizie = req;
-		data = '';
-		richiestaPagineGiochi.on("response", function(response){
-			// Un chunk (pezzo) di dati è stato ricevuto
-			response.on('data', (chunk) => {
-				data = data + chunk;
+		res.sendFile('notizie.html', {"root": __dirname });
+		// Apertura webserver socket
+		webSocketServer.on('connection', function connection(socket){
+			socket.on('close', function(error){
+				console.log("Client disconnesso");
 			});
-			// Tutta la risposta è stata ricevuta
-			response.on('end', () => {
-				var oggetto = JSON.parse(data);
-				console.log("Oggetto ottenuto api facebook");
-				console.log(oggetto);
-				if ( !(oggetto.error) )
-				{
-					res.sendFile('notizie.html', {"root": __dirname });
-					console.log("Richiedo notizie");
-					// L'oggetto non contiene errori quindi avrò le mie informazioni
-					//var indice = 0;
-					arrayNotizie = [];
-					//global.indice = 0;
-					// Creo il websocket
-					if ( oggetto.games.data.length > 0 )
-					{					
-						// Funzione per scrivere nell'array le notizie
-						riceviNotizie(arrayNotizie, oggetto.games.data, ws);
-						
-						//console.log(arrayNotizie);
+			console.log("Client connesso al WebSocket");
+			// Ottengo le pagine relative ai giochi che piacciono all'utente
+			richiestaPagineGiochi = https.get("https://graph.facebook.com/me/?fields=games.limit(5)&access_token="+req.session.accessTokenFb);
+			richiestaPagineGiochi.risultatoNotizie = res;
+			richiestaPagineGiochi.richiestaNotizie = req;
+			richiestaPagineGiochi.socketWeb = socket;
+			data = '';
+			richiestaPagineGiochi.on("response", function(response){
+				// Un chunk (pezzo) di dati è stato ricevuto
+				response.on('data', (chunk) => {
+					data = data + chunk;
+				});
+				// Tutta la risposta è stata ricevuta
+				response.on('end', () => {
+					var oggetto = JSON.parse(data);
+					console.log("Oggetto ottenuto api facebook");
+					console.log(oggetto);
+					if ( !(oggetto.error) )
+					{
+						//res.sendFile('notizie.html', {"root": __dirname });
+						console.log("Richiedo notizie");
+						// L'oggetto non contiene errori quindi avrò le mie informazioni
+						//var indice = 0;
+						arrayNotizie = [];
+						//global.indice = 0;
+						// Invio il numero di pagine che ho
+						socket.send(oggetto.games.data.length);
+						// Se il numero di pagine è maggiore di 0, ricerco gli articoli dei giochi 
+						if ( oggetto.games.data.length > 0 )
+						{					
+							
+							// Funzione per scrivere nell'array le notizie
+							riceviNotizie(arrayNotizie, oggetto.games.data, richiestaPagineGiochi.socketWeb);
+							
+							//console.log(arrayNotizie);
+						}
+						else
+						{
+							// Non ci sono giochi
+							console.log("Non ci sono giochi");
+						}
 					}
 					else
 					{
-						// Non ci sono giochi
-						console.log("Non ci sono giochi");
+						console.log("Errore oggetto api facebook");
+						richiestaPagineGiochi.risultatoNotizie.redirect("/");
 					}
-				}
-				else
-				{
-					console.log("Errore oggetto api facebook");
-					richiestaPagineGiochi.risultatoNotizie.redirect("/");
-				}
+				});
 			});
+			console.log("Access token fb richiedendo /notizie: "+ req.session.accessTokenFb);
 		});
-		console.log("Access token fb richiedendo /notizie: "+ req.session.accessTokenFb);
 	}
 	else
 	{
@@ -147,15 +158,34 @@ app.get("/notizie", function(req, res){
 	}
 });
 
-function riceviNotizie(notizie, pagine)
+function sostituisciSpazi(stringa)
+{
+	var i = 0;
+	var nuovaStringa = "";
+	while (i < stringa.length)
+	{
+		if ( stringa.charAt(i) == " " )
+		{
+			nuovaStringa = nuovaStringa + "+";
+		}
+		else
+		{
+			nuovaStringa = nuovaStringa + stringa.charAt(i);
+		}
+		i = i + 1;
+	}
+	return nuovaStringa;
+}
+
+function riceviNotizie(notizie, pagine, socket)
 {
 	if ( pagine.length > 0 )
 	{
 		// Richiedo per ogni gioco notizie su IGN 
-		var urlRichiestaNotizia = "https://newsapi.org/v2/everything?q="+pagine[0].name+"&sortby=publishedAt&sources=ign&pageSize=5&apiKey="+apikeyNotizie;
+		var urlRichiestaNotizia = "https://newsapi.org/v2/everything?q="+sostituisciSpazi(pagine[0].name)+"&sortBy=publishedAt&sources=ign&language=en&pageSize=5&apiKey="+apikeyNotizie;
 		var richiestaNotizia = https.get(urlRichiestaNotizia);
 		//console.log("Richiedo -->"+oggetto.games.data[0].name);
-		console.log("Richiedo -->"+pagine[0].name);
+		console.log("Richiedo -->"+sostituisciSpazi(pagine[0].name));
 		data = "";
 		richiestaNotizia.on("response", function(response){
 			// Un chunk (pezzo) di dati è stato ricevuto
@@ -164,20 +194,25 @@ function riceviNotizie(notizie, pagine)
 			});
 			// Tutta la risposta è stata ricevuta
 			response.on('end', () => {
+				console.log("Parso JSON");
 				var oggetto = JSON.parse(data);
 				console.log("Notizia ricevuta!");
-				console.log(oggetto);
+				//console.log(oggetto);
 				notizie.push(oggetto);
+				console.log("Scrivo sulla socket");
+				// Scrivo su socket le notizie
+				socket.send(data);
 				// Levo la prima pagina
 				pagine.shift();
 				// Passo a quella successiva
-				riceviNotizie(notizie, pagine);
+				riceviNotizie(notizie, pagine, socket);
 			});
 		});
 	}
 	else
 	{
 		console.log("Pagine finite");
+		socket.close();
 	}
 }
 
