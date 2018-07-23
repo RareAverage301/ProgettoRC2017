@@ -1,0 +1,9 @@
+23/7/2018 19:59:18 | Ricevuto: Client 3: connesso tramite websocket!
+23/7/2018 19:59:18 | Ricevuto: Client 3: richiesta giochi tramite Facebook
+23/7/2018 19:59:18 | Ricevuto: Client 3: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 19:59:18 | Ricevuto: Client 3: giochi ottenuti pari a 5
+23/7/2018 19:59:19 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 19:59:19 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 19:59:19 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 19:59:19 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 19:59:19 | Ricevuto: Client 3: notizie di un gioco inviata

@@ -194,7 +194,7 @@ function sostituisciSpazi(stringa)
 	return nuovaStringa;
 }
 
-function riceviNotizie(notizie, pagine, socket)
+/*function riceviNotizie(notizie, pagine, socket)
 {
 	console.log("Socket in riceviNotizie: "+socket.readyState);
 	if ( pagine.length > 0 && socket.readyState == 1 )
@@ -233,7 +233,7 @@ function riceviNotizie(notizie, pagine, socket)
 				{
 					console.log("il socket è stato chiuso poco prima della scrittura");
 				}*/
-			});
+		/*	});
 		});
 	}
 	else
@@ -241,7 +241,7 @@ function riceviNotizie(notizie, pagine, socket)
 		console.log("Pagine finite");
 		socket.close();
 	}
-}
+}*/
 
 // Application server in ascolto alla porta 8888
 app.listen(8888);
