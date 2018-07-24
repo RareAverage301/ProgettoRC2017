@@ -8,6 +8,9 @@ specializzata in notizie di videogiochi chiamata IGN. Le notizie vengono notific
 ,in questo caso il browser, attraverso i WebSocket. L'applicazione comunica 
 con un'altra applicazione tramite AMQP per effettuare logging su file.
 
+Per eseguire:
+node app.js
+node logfile.js
 
 Documentazione API
 
