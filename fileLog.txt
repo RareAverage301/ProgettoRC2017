@@ -7,3 +7,305 @@
 23/7/2018 19:59:19 | Ricevuto: Client 3: notizie di un gioco inviata
 23/7/2018 19:59:19 | Ricevuto: Client 3: notizie di un gioco inviata
 23/7/2018 19:59:19 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 20:20:46 | Ricevuto: Connesso utente non autenticato
+23/7/2018 20:20:47 | Ricevuto: Client 0: connesso tramite websocket!
+23/7/2018 20:20:47 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+23/7/2018 20:20:47 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:20:47 | Ricevuto: Client 0: giochi ottenuti pari a 5
+23/7/2018 20:20:47 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:20:47 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:20:47 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:20:47 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:20:47 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:45:16 | Ricevuto: Client 1: connesso tramite websocket!
+23/7/2018 20:45:16 | Ricevuto: Client 1: richiesta giochi tramite Facebook
+23/7/2018 20:45:16 | Ricevuto: Client 1: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:45:16 | Ricevuto: Client 1: giochi ottenuti pari a 5
+23/7/2018 20:45:17 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 20:45:17 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 20:45:17 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 20:45:17 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 20:45:17 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 20:46:50 | Ricevuto: Client 2: connesso tramite websocket!
+23/7/2018 20:46:50 | Ricevuto: Client 2: richiesta giochi tramite Facebook
+23/7/2018 20:46:50 | Ricevuto: Client 2: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:46:50 | Ricevuto: Client 2: giochi ottenuti pari a 5
+23/7/2018 20:46:51 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 20:46:51 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 20:46:51 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 20:46:51 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 20:46:51 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 20:47:00 | Ricevuto: Client 3: connesso tramite websocket!
+23/7/2018 20:47:00 | Ricevuto: Client 3: richiesta giochi tramite Facebook
+23/7/2018 20:47:00 | Ricevuto: Client 3: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:47:00 | Ricevuto: Client 3: giochi ottenuti pari a 5
+23/7/2018 20:47:01 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 20:47:01 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 20:47:01 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 20:47:01 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 20:47:01 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 20:48:31 | Ricevuto: Client 4: connesso tramite websocket!
+23/7/2018 20:48:31 | Ricevuto: Client 4: richiesta giochi tramite Facebook
+23/7/2018 20:48:31 | Ricevuto: Client 4: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:48:31 | Ricevuto: Client 4: giochi ottenuti pari a 5
+23/7/2018 20:48:31 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 20:48:31 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 20:48:31 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 20:48:31 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 20:48:31 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 20:49:28 | Ricevuto: Client 5: connesso tramite websocket!
+23/7/2018 20:49:28 | Ricevuto: Client 5: richiesta giochi tramite Facebook
+23/7/2018 20:49:28 | Ricevuto: Client 5: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:49:28 | Ricevuto: Client 5: giochi ottenuti pari a 5
+23/7/2018 20:49:29 | Ricevuto: Client 5: notizie di un gioco inviata
+23/7/2018 20:49:29 | Ricevuto: Client 5: notizie di un gioco inviata
+23/7/2018 20:49:29 | Ricevuto: Client 5: notizie di un gioco inviata
+23/7/2018 20:49:29 | Ricevuto: Client 5: notizie di un gioco inviata
+23/7/2018 20:49:29 | Ricevuto: Client 5: notizie di un gioco inviata
+23/7/2018 20:49:47 | Ricevuto: Client 6: connesso tramite websocket!
+23/7/2018 20:49:47 | Ricevuto: Client 6: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:49:47 | Ricevuto: Client 6: richiesta giochi tramite Facebook
+23/7/2018 20:49:47 | Ricevuto: Client 6: giochi ottenuti pari a 5
+23/7/2018 20:49:48 | Ricevuto: Client 6: notizie di un gioco inviata
+23/7/2018 20:49:48 | Ricevuto: Client 6: notizie di un gioco inviata
+23/7/2018 20:49:48 | Ricevuto: Client 6: notizie di un gioco inviata
+23/7/2018 20:49:48 | Ricevuto: Client 6: notizie di un gioco inviata
+23/7/2018 20:49:48 | Ricevuto: Client 6: notizie di un gioco inviata
+23/7/2018 20:50:17 | Ricevuto: Client 7: connesso tramite websocket!
+23/7/2018 20:50:17 | Ricevuto: Client 7: richiesta giochi tramite Facebook
+23/7/2018 20:50:17 | Ricevuto: Client 7: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:50:17 | Ricevuto: Client 7: giochi ottenuti pari a 5
+23/7/2018 20:50:18 | Ricevuto: Client 7: notizie di un gioco inviata
+23/7/2018 20:50:18 | Ricevuto: Client 7: notizie di un gioco inviata
+23/7/2018 20:50:18 | Ricevuto: Client 7: notizie di un gioco inviata
+23/7/2018 20:50:18 | Ricevuto: Client 7: notizie di un gioco inviata
+23/7/2018 20:50:18 | Ricevuto: Client 7: notizie di un gioco inviata
+23/7/2018 20:50:29 | Ricevuto: Client 8: connesso tramite websocket!
+23/7/2018 20:50:29 | Ricevuto: Client 8: richiesta giochi tramite Facebook
+23/7/2018 20:50:29 | Ricevuto: Client 8: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:50:29 | Ricevuto: Client 8: giochi ottenuti pari a 5
+23/7/2018 20:50:29 | Ricevuto: Client 8: notizie di un gioco inviata
+23/7/2018 20:50:29 | Ricevuto: Client 8: notizie di un gioco inviata
+23/7/2018 20:50:29 | Ricevuto: Client 8: notizie di un gioco inviata
+23/7/2018 20:50:29 | Ricevuto: Client 8: notizie di un gioco inviata
+23/7/2018 20:50:29 | Ricevuto: Client 8: notizie di un gioco inviata
+23/7/2018 20:51:09 | Ricevuto: Client 9: connesso tramite websocket!
+23/7/2018 20:51:09 | Ricevuto: Client 9: richiesta giochi tramite Facebook
+23/7/2018 20:51:09 | Ricevuto: Client 9: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:51:09 | Ricevuto: Client 9: giochi ottenuti pari a 5
+23/7/2018 20:51:10 | Ricevuto: Client 9: notizie di un gioco inviata
+23/7/2018 20:51:10 | Ricevuto: Client 9: notizie di un gioco inviata
+23/7/2018 20:51:10 | Ricevuto: Client 9: notizie di un gioco inviata
+23/7/2018 20:51:10 | Ricevuto: Client 9: notizie di un gioco inviata
+23/7/2018 20:51:10 | Ricevuto: Client 9: notizie di un gioco inviata
+23/7/2018 20:51:43 | Ricevuto: Client 10: connesso tramite websocket!
+23/7/2018 20:51:43 | Ricevuto: Client 10: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:51:43 | Ricevuto: Client 10: richiesta giochi tramite Facebook
+23/7/2018 20:51:43 | Ricevuto: Client 10: giochi ottenuti pari a 5
+23/7/2018 20:51:44 | Ricevuto: Client 10: notizie di un gioco inviata
+23/7/2018 20:51:44 | Ricevuto: Client 10: notizie di un gioco inviata
+23/7/2018 20:51:44 | Ricevuto: Client 10: notizie di un gioco inviata
+23/7/2018 20:51:44 | Ricevuto: Client 10: notizie di un gioco inviata
+23/7/2018 20:51:44 | Ricevuto: Client 10: notizie di un gioco inviata
+23/7/2018 20:56:34 | Ricevuto: Client 11: connesso tramite websocket!
+23/7/2018 20:56:34 | Ricevuto: Client 11: richiesta giochi tramite Facebook
+23/7/2018 20:56:34 | Ricevuto: Client 11: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:56:34 | Ricevuto: Client 11: giochi ottenuti pari a 5
+23/7/2018 20:56:35 | Ricevuto: Client 11: notizie di un gioco inviata
+23/7/2018 20:56:35 | Ricevuto: Client 11: notizie di un gioco inviata
+23/7/2018 20:56:35 | Ricevuto: Client 11: notizie di un gioco inviata
+23/7/2018 20:56:35 | Ricevuto: Client 11: notizie di un gioco inviata
+23/7/2018 20:56:35 | Ricevuto: Client 11: notizie di un gioco inviata
+23/7/2018 20:59:54 | Ricevuto: Connesso utente non autenticato
+23/7/2018 20:59:54 | Ricevuto: Client 0: connesso tramite websocket!
+23/7/2018 20:59:55 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+23/7/2018 20:59:55 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 20:59:55 | Ricevuto: Client 0: giochi ottenuti pari a 5
+23/7/2018 20:59:56 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:59:56 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:59:56 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:59:56 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 20:59:57 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:02:09 | Ricevuto: Connesso utente non autenticato
+23/7/2018 21:02:10 | Ricevuto: Client 0: connesso tramite websocket!
+23/7/2018 21:02:10 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+23/7/2018 21:02:10 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:02:10 | Ricevuto: Client 0: giochi ottenuti pari a 5
+23/7/2018 21:02:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:02:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:02:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:02:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:02:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:20:46 | Ricevuto: Client 1: connesso tramite websocket!
+23/7/2018 21:20:46 | Ricevuto: Client 1: richiesta giochi tramite Facebook
+23/7/2018 21:20:46 | Ricevuto: Client 1: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:20:46 | Ricevuto: Client 1: giochi ottenuti pari a 5
+23/7/2018 21:20:46 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:20:46 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:20:46 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:20:46 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:20:46 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:21:56 | Ricevuto: Client 2: connesso tramite websocket!
+23/7/2018 21:21:56 | Ricevuto: Client 2: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:21:56 | Ricevuto: Client 2: richiesta giochi tramite Facebook
+23/7/2018 21:21:56 | Ricevuto: Client 2: giochi ottenuti pari a 5
+23/7/2018 21:21:56 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 21:21:56 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 21:21:57 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 21:21:57 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 21:21:57 | Ricevuto: Client 2: notizie di un gioco inviata
+23/7/2018 21:22:12 | Ricevuto: Client 3: connesso tramite websocket!
+23/7/2018 21:22:12 | Ricevuto: Client 3: richiesta giochi tramite Facebook
+23/7/2018 21:22:12 | Ricevuto: Client 3: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:22:12 | Ricevuto: Client 3: giochi ottenuti pari a 5
+23/7/2018 21:22:13 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 21:22:13 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 21:22:13 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 21:22:13 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 21:22:13 | Ricevuto: Client 3: notizie di un gioco inviata
+23/7/2018 21:22:17 | Ricevuto: Client 4: connesso tramite websocket!
+23/7/2018 21:22:18 | Ricevuto: Client 4: richiesta giochi tramite Facebook
+23/7/2018 21:22:18 | Ricevuto: Client 4: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:22:18 | Ricevuto: Client 4: giochi ottenuti pari a 5
+23/7/2018 21:22:19 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 21:22:19 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 21:22:19 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 21:22:19 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 21:22:19 | Ricevuto: Client 4: notizie di un gioco inviata
+23/7/2018 21:23:10 | Ricevuto: Connesso utente non autenticato
+23/7/2018 21:23:10 | Ricevuto: Client 0: connesso tramite websocket!
+23/7/2018 21:23:10 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+23/7/2018 21:23:10 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:23:10 | Ricevuto: Client 0: giochi ottenuti pari a 5
+23/7/2018 21:23:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:23:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:23:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:23:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:23:11 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:25:30 | Ricevuto: Connesso utente non autenticato
+23/7/2018 21:25:31 | Ricevuto: Client 0: connesso tramite websocket!
+23/7/2018 21:25:31 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:25:31 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+23/7/2018 21:25:31 | Ricevuto: Client 0: giochi ottenuti pari a 5
+23/7/2018 21:25:32 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:25:32 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:25:32 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:25:32 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:25:32 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:29:59 | Ricevuto: Client 1: connesso tramite websocket!
+23/7/2018 21:29:59 | Ricevuto: Client 1: richiesta giochi tramite Facebook
+23/7/2018 21:29:59 | Ricevuto: Client 1: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:29:59 | Ricevuto: Client 1: giochi ottenuti pari a 5
+23/7/2018 21:29:59 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:29:59 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:29:59 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:29:59 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:29:59 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:30:06 | Ricevuto: Connesso utente non autenticato
+23/7/2018 21:30:06 | Ricevuto: Client 0: connesso tramite websocket!
+23/7/2018 21:30:06 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+23/7/2018 21:30:06 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:30:06 | Ricevuto: Client 0: giochi ottenuti pari a 5
+23/7/2018 21:30:07 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:30:07 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:30:07 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:30:07 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:30:07 | Ricevuto: Client 0: notizie di un gioco inviata
+23/7/2018 21:46:47 | Ricevuto: Connesso utente non autenticato
+23/7/2018 21:47:43 | Ricevuto: Connesso utente non autenticato
+23/7/2018 21:47:48 | Ricevuto: Client 1: connesso tramite websocket!
+23/7/2018 21:47:49 | Ricevuto: Client 1: richiesta giochi tramite Facebook
+23/7/2018 21:47:49 | Ricevuto: Client 1: richiesta giochi tramite Facebook avvenuta con successo
+23/7/2018 21:47:49 | Ricevuto: Client 1: giochi ottenuti pari a 5
+23/7/2018 21:47:49 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:47:49 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:47:49 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:47:49 | Ricevuto: Client 1: notizie di un gioco inviata
+23/7/2018 21:47:49 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 1: connesso tramite websocket!
+24/7/2018 13:22:14 | Ricevuto: Client 1: richiesta giochi tramite Facebook
+24/7/2018 13:22:14 | Ricevuto: Client 1: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 13:22:14 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 1: giochi ottenuti pari a 5
+24/7/2018 13:22:14 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+24/7/2018 13:22:14 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 13:22:14 | Ricevuto: Client 0: giochi ottenuti pari a 5
+24/7/2018 13:22:14 | Ricevuto: Client 0: connesso tramite websocket!
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Connesso utente non autenticato
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Connesso utente non autenticato
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+24/7/2018 13:22:14 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: connesso tramite websocket!
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: giochi ottenuti pari a 5
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: connesso tramite websocket!
+24/7/2018 13:22:14 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+24/7/2018 13:22:14 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 13:22:14 | Ricevuto: Connesso utente non autenticato
+24/7/2018 13:22:14 | Ricevuto: Client 0: giochi ottenuti pari a 5
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:22:14 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:23:03 | Ricevuto: Connesso utente non autenticato
+24/7/2018 13:23:05 | Ricevuto: Client 0: connesso tramite websocket!
+24/7/2018 13:23:05 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+24/7/2018 13:23:05 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 13:23:05 | Ricevuto: Client 0: giochi ottenuti pari a 5
+24/7/2018 13:23:06 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:23:06 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:23:06 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:23:06 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:23:06 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 13:23:36 | Ricevuto: Client 1: connesso tramite websocket!
+24/7/2018 13:23:36 | Ricevuto: Client 1: richiesta giochi tramite Facebook
+24/7/2018 13:23:36 | Ricevuto: Client 1: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 13:23:36 | Ricevuto: Client 1: giochi ottenuti pari a 5
+24/7/2018 13:23:36 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:23:36 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:23:36 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:23:36 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:23:36 | Ricevuto: Client 1: notizie di un gioco inviata
+24/7/2018 13:40:31 | Ricevuto: Client 2: connesso tramite websocket!
+24/7/2018 13:40:31 | Ricevuto: Client 2: richiesta giochi tramite Facebook
+24/7/2018 13:40:31 | Ricevuto: Client 2: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 13:40:31 | Ricevuto: Client 2: giochi ottenuti pari a 5
+24/7/2018 13:40:31 | Ricevuto: Client 2: notizie di un gioco inviata
+24/7/2018 13:40:32 | Ricevuto: Client 2: notizie di un gioco inviata
+24/7/2018 13:40:32 | Ricevuto: Client 2: notizie di un gioco inviata
+24/7/2018 13:40:32 | Ricevuto: Client 2: notizie di un gioco inviata
+24/7/2018 13:40:32 | Ricevuto: Client 2: notizie di un gioco inviata
+24/7/2018 14:35:16 | Ricevuto: Connesso utente non autenticato
+24/7/2018 14:35:17 | Ricevuto: Client 0: connesso tramite websocket!
+24/7/2018 14:35:17 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+24/7/2018 14:35:17 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 14:35:17 | Ricevuto: Client 0: giochi ottenuti pari a 5
+24/7/2018 14:35:17 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:35:18 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:35:18 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:35:18 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:35:18 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:39:22 | Ricevuto: Connesso utente non autenticato
+24/7/2018 14:39:24 | Ricevuto: Client 0: connesso tramite websocket!
+24/7/2018 14:39:24 | Ricevuto: Client 0: richiesta giochi tramite Facebook
+24/7/2018 14:39:24 | Ricevuto: Client 0: richiesta giochi tramite Facebook avvenuta con successo
+24/7/2018 14:39:24 | Ricevuto: Client 0: giochi ottenuti pari a 5
+24/7/2018 14:39:25 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:39:25 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:39:25 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:39:25 | Ricevuto: Client 0: notizie di un gioco inviata
+24/7/2018 14:39:25 | Ricevuto: Client 0: notizie di un gioco inviata

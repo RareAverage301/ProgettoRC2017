@@ -23,7 +23,8 @@ var connessioneAmqp;
 
 // Link per oauth fb
 //var indirizzoServer = "192.168.1.219";
-var indirizzoServer = "87.3.184.135";
+//var indirizzoServer = "87.3.184.135";
+var indirizzoServer = "localhost";
 var appIdFb = '1590194347739475';
 var clientSecretFb = '3aea791ef71442c9bb3d8f9347fb8946';
 var loginLink = "https://www.facebook.com/v3.0/dialog/oauth?client_id="+appIdFb+"&auth_type=rerequest&scope=user_likes&redirect_uri=http://"+indirizzoServer+":8888/login&state=stato1234";
@@ -101,9 +102,9 @@ webSocketServer.on('connection', function connection(socket, req){
 							while ( indice < oggetto.games.data.length )
 							{
 								// Ottengo le notizie e le invio al browser relative al gioco
-								console.log(sostituisciSpazi(oggetto.games.data[indice].name));
+								//console.log(sostituisciSpazi(oggetto.games.data[indice].name));
 								//var nomeGioco = oggetto.games.data[indice].name;
-								var urlRichiestaNotizia = "https://newsapi.org/v2/everything?q="+sostituisciSpazi(oggetto.games.data[indice].name)+"&sortBy=publishedAt&sources=ign&language=en&pageSize=5&apiKey="+apikeyNotizie;
+								var urlRichiestaNotizia = 'https://newsapi.org/v2/everything?q="+'+sostituisciSpazi(oggetto.games.data[indice].name)+'"&sortBy=publishedAt&sources=ign&language=en&pageSize=5&apiKey='+apikeyNotizie;
 								var richiestaNotizia = https.get(urlRichiestaNotizia);
 								richiestaNotizia.gioco = oggetto.games.data[indice].name;
 								//console.log(richiestaNotizia.gioco);
